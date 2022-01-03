@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: lightblue;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  padding: 10px;
+  text-align: start;
+}
+
+p {
+  padding: 10px;
+  text-align: start;
+}
+
+/* PAGRINDAS(Main) */
+.cont-f {
+  margin: 5rem;
+  padding: 1.5rem;
+}
+
+/* Logo */
+.cont-g-1 {
+  background-color: coral;
+  grid-area: logo;
+}
+
+/* Meniu */
+.cont-g-2 {
+  background-color: coral;
+  grid-area: meniu;
+}
+
+/* Turinys - 1 */
+.cont-g-3 {
+  background-color: coral;
+  grid-area: turinys1;
+}
+
+/* Turinys - 2 */
+.cont-g-4 {
+  background-color: coral;
+  grid-area: turinys2;
+}
+
+/* Turinys - 3 */
+.cont-g-5 {
+  background-color: coral;
+  grid-area: turinys3;
+}
+
+/* Turinys - 4 */
+.cont-g-6 {
+  background-color: coral;
+  grid-area: turinys4;
+}
+
+/* Turinys - 5 */
+.cont-g-7 {
+  background-color: coral;
+  grid-area: turinys5;
+}
+
+/* Turinys - 6 */
+.cont-g-8 {
+  background-color: coral;
+  grid-area: turinys6;
+}
+
+/* Apacia */
+.cont-g-9 {
+  background-color: coral;
+  grid-area: apacia1;
+}
+
+/* Apacia */
+.cont-g-10 {
+  background-color: coral;
+  grid-area: apacia2;
+}
+
+.cont-g {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "logo logo meniu"
+    "turinys1 turinys1 turinys2"
+    "turinys3 turinys3 turinys4"
+    "turinys5 turinys5 turinys6"
+    "apacia1 apacia1 apacia2";
+}
+
+@media (max-width: 1000px) {
+  .cont-g {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      "logo"
+      "meniu"
+      "turinys1"
+      "turinys2"
+      "turinys3"
+      "turinys4"
+      "turinys5"
+      "turinys6"
+      "apacia1"
+      "apacia2";
+  }
+}
